@@ -25,7 +25,7 @@ YAWN_THRESH = 0.75
 
 
 last_alarm_time = 0
-ALARM_COOLDOWN = 4  
+ALARM_COOLDOWN = 3  
 ALARM_SOUND = "alarm.wav" 
 
 def play_alarm():
