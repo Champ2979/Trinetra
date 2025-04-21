@@ -1,4 +1,5 @@
-mediapipe
-opencv-python
+dlib
 numpy
-playsound
+opencv-python
+imutils
+winsound
