@@ -56,3 +56,4 @@ pip install -r requirements.txt
 ## License
 - MIT License
 
+### If there is any issues related to project you can contact me on my Linkedin or mail me. I would be happy to solve your queries. Both links are in my bio.
