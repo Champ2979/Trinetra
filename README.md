@@ -27,50 +27,32 @@ cd Trinetra
 ```bash
 pip install -r requirements.txt
 ```
-## Create .env file:
-```bash
-OPENWEATHER_API_KEY="your_api_key_here"
-```
+## Download the facial landmark predictor
+- Download ```shape_predictor_68_face_landmarks.dat``` from [Dlib's model](https://github.com/italojs/facial-landmarks-recognition/blob/master/shape_predictor_68_face_landmarks.dat).
+- Extract and place it in the project folder.
 
-## Follow notebook steps to:
 
-- Train model on historical data
-- Save trained model
-- Get 5-day forecasts
-- Make predictions using the saved model
+## Add your alarm sound
 
-## API Key Setup
-- Get free API key from OpenWeatherMap
+- Place a ```.wav file``` (e.g., alarm.wav) in the project folder.
 
-- Add to .env file:
-```bash
-OPENWEATHER_API_KEY="your_actual_key_here"
-```
-## Model Performance
-- Training Accuracy: 85.42%
-- Testing Accuracy: 84.74%
+## Run the program
+- python main.py
 
-### Confusion Matrix visualization included
+## How It Works 🔍
+- Captures video from the webcam.
 
-## Dependencies
-- Python 3.8+
+- Detects facial landmarks (eyes & mouth).
 
-- scikit-learn
+- Calculates EAR (Eye Aspect Ratio) to check if eyes are closed.
 
-- pandas
+- Calculates MAR (Mouth Aspect Ratio) to detect yawning.
 
-- matplotlib
-
-- requests
-
-- python-dotenv
-
-- joblib
+- Triggers an alarm if:
+  - Eyes are closed for too long (sleeping).
+  - Eyes are partially closed (drowsy).
+  - Mouth is open wide (yawning).
 
 ## License
 - MIT License
-
-## Acknowledgements
-- Dataset: Seattle Weather Dataset
-- Weather API: OpenWeatherMap
 
